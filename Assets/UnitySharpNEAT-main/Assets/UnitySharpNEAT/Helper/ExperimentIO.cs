@@ -146,8 +146,10 @@ namespace UnitySharpNEAT
             {
                 Utility.Log("Error loading genome from file, could not find the file at: " + filePath + "\n" + e1.Message);
 
-                if(createNewGenesIfNotLoadable)
+                if (createNewGenesIfNotLoadable)
+                {
                     genomeList = genomeFactory.CreateGenomeList(experiment.DefaultPopulationSize, 0);
+                }
             }
             return genomeList;
         }

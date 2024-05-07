@@ -38,6 +38,11 @@ namespace UnitySharpNEAT
         [SerializeField]
         private int _networkOutputCount = 2;
 
+        [Header("Grid Settings")]
+        [SerializeField] private float _verticalOffset;
+        [SerializeField] private float _horizontalOffset;
+        [SerializeField] private int _NRows;
+
 
         [Header("Evaluation Settings")]
 
@@ -59,7 +64,9 @@ namespace UnitySharpNEAT
         [SerializeField, Tooltip("The parent transform which will hold the instantiated Units.")]
         private Transform _spawnParent = default;
 
+        [Header("Cam")]
 
+        [SerializeField] Camera gameCamera;
         [Header("Debug")]
 
         [SerializeField]
@@ -74,6 +81,8 @@ namespace UnitySharpNEAT
         private HashSet<UnitController> _usedUnitsPool = new HashSet<UnitController>();
 
         private DateTime _startTime;
+
+        private int _spawnCount = 0;
         #endregion
 
         #region PROPERTIES
@@ -163,7 +172,7 @@ namespace UnitySharpNEAT
             // Decode the genome into a phenome (neural network, i.e. IBlackBox).
             IBlackBox phenome = genomeDecoder.Decode(genome);
 
-            ActivateUnit(phenome);
+            ActivateUnit(phenome, true);
         }
         #endregion
 
@@ -184,10 +193,18 @@ namespace UnitySharpNEAT
         /// <summary>
         /// Creates (or re-uses) a UnitController instance and assigns the Neural Net (IBlackBox) to it and activates it, so that it starts executing the Net.
         /// </summary>
-        public void ActivateUnit(IBlackBox box)
+        public void ActivateUnit(IBlackBox box, bool focus = false)
         {
             UnitController controller = GetUnusedUnit(box);
             controller.ActivateUnit(box);
+
+            if (focus)
+            {
+                gameCamera.transform.position = new Vector3(0, 0, -10) +
+                    controller.transform.position;
+                gameCamera.gameObject.GetComponent<Rigidbody2D>().simulated = false;
+                gameCamera.orthographicSize = 7;
+            }
         }
 
         /// <summary>
@@ -233,7 +250,15 @@ namespace UnitySharpNEAT
         /// </summary>
         private UnitController InstantiateUnit(IBlackBox box)
         {
-            UnitController controller = Instantiate(_unitControllerPrefab, _unitControllerPrefab.transform.position, _unitControllerPrefab.transform.rotation);
+            int row = -_spawnCount% _NRows;
+            int col = _spawnCount / _NRows;
+            _spawnCount++;
+
+            Vector3 spawnPosition = _unitControllerPrefab.transform.position +
+                new Vector3(col*_horizontalOffset, row* _verticalOffset, 0);
+
+            UnitController controller = Instantiate(_unitControllerPrefab,
+                spawnPosition, _unitControllerPrefab.transform.rotation);
 
             if (_spawnParent != null)
                 controller.transform.parent = _spawnParent;

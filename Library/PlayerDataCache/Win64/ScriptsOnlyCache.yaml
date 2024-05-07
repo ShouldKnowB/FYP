@@ -4,19 +4,25 @@ ScriptsOnlyBuild:
     - AliveManager
     - AutoShootManager
     - BlockPlayerBullets
+    - CamControls
     - DebrisAutoSpawner
     - DieToPlayerBullets
     - EnemySpawnCoordiator
     - FrameRateSetter
     - GameInstanceManager
+    - GameInstanceNEATUnit
     - GoToSceneOnClick
+    - InfoGatherer
     - InputsIntoPlayerMovements
     - KillZone
     - KillplayerOnContact
+    - NEATInputTaker
     - PlayerBulletKillZone
     - PlayerShootManager
     - QuitApplicationOnClick
     - Spawner
+    - UnitySharpNEAT.NeatSupervisor
+    - UnitySharpNEAT.NeatUI
     - UserInputTaker
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
@@ -51,6 +57,109 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Image
     - UnityEngine.UI.Text
   sceneClasses:
+    Assets/Scenes/Ai Training scene.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 50
+      Script: {instanceID: 0}
+    - Class: 61
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 1454}
+    - Class: 114
+      Script: {instanceID: 1456}
+    - Class: 114
+      Script: {instanceID: 1566}
+    - Class: 114
+      Script: {instanceID: 2024}
+    - Class: 114
+      Script: {instanceID: 2218}
+    - Class: 114
+      Script: {instanceID: 2260}
+    - Class: 114
+      Script: {instanceID: 2294}
+    - Class: 114
+      Script: {instanceID: 2312}
+    - Class: 114
+      Script: {instanceID: 2486}
+    - Class: 114
+      Script: {instanceID: 2500}
+    - Class: 114
+      Script: {instanceID: 2540}
+    - Class: 114
+      Script: {instanceID: 2584}
+    - Class: 114
+      Script: {instanceID: 2654}
+    - Class: 114
+      Script: {instanceID: 2758}
+    - Class: 114
+      Script: {instanceID: 2934}
+    - Class: 114
+      Script: {instanceID: 3034}
+    - Class: 114
+      Script: {instanceID: 3054}
+    - Class: 114
+      Script: {instanceID: 3200}
+    - Class: 114
+      Script: {instanceID: 3402}
+    - Class: 114
+      Script: {instanceID: 3590}
+    - Class: 114
+      Script: {instanceID: 4830}
+    - Class: 114
+      Script: {instanceID: 5316}
+    - Class: 114
+      Script: {instanceID: 5492}
+    - Class: 114
+      Script: {instanceID: 5668}
+    - Class: 114
+      Script: {instanceID: 5742}
+    - Class: 114
+      Script: {instanceID: 5756}
+    - Class: 114
+      Script: {instanceID: 5878}
+    - Class: 114
+      Script: {instanceID: 6096}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 198
+      Script: {instanceID: 0}
+    - Class: 199
+      Script: {instanceID: 0}
+    - Class: 212
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
     Assets/Scenes/Main Menu.unity:
     - Class: 1
       Script: {instanceID: 0}
@@ -64,30 +173,32 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
+    - Class: 49
+      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1518}
+      Script: {instanceID: 1454}
     - Class: 114
-      Script: {instanceID: 2240}
+      Script: {instanceID: 1456}
     - Class: 114
-      Script: {instanceID: 2670}
+      Script: {instanceID: 1640}
     - Class: 114
-      Script: {instanceID: 2840}
+      Script: {instanceID: 2294}
     - Class: 114
-      Script: {instanceID: 2946}
+      Script: {instanceID: 2758}
     - Class: 114
-      Script: {instanceID: 3080}
+      Script: {instanceID: 2934}
     - Class: 114
-      Script: {instanceID: 3322}
+      Script: {instanceID: 3054}
     - Class: 114
-      Script: {instanceID: 3444}
+      Script: {instanceID: 3200}
     - Class: 114
-      Script: {instanceID: 25492}
+      Script: {instanceID: 3590}
     - Class: 114
-      Script: {instanceID: 25500}
+      Script: {instanceID: 5742}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -130,51 +241,51 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 1518}
+      Script: {instanceID: 1454}
     - Class: 114
-      Script: {instanceID: 1558}
+      Script: {instanceID: 1456}
     - Class: 114
-      Script: {instanceID: 2206}
+      Script: {instanceID: 1566}
     - Class: 114
-      Script: {instanceID: 2240}
+      Script: {instanceID: 2260}
     - Class: 114
-      Script: {instanceID: 2424}
+      Script: {instanceID: 2294}
     - Class: 114
-      Script: {instanceID: 2574}
+      Script: {instanceID: 2486}
     - Class: 114
-      Script: {instanceID: 2670}
+      Script: {instanceID: 2654}
     - Class: 114
-      Script: {instanceID: 2840}
+      Script: {instanceID: 2758}
     - Class: 114
-      Script: {instanceID: 2928}
+      Script: {instanceID: 2934}
     - Class: 114
-      Script: {instanceID: 2946}
+      Script: {instanceID: 3034}
     - Class: 114
-      Script: {instanceID: 3080}
+      Script: {instanceID: 3054}
     - Class: 114
-      Script: {instanceID: 3266}
+      Script: {instanceID: 3200}
     - Class: 114
-      Script: {instanceID: 3322}
+      Script: {instanceID: 3402}
     - Class: 114
-      Script: {instanceID: 3444}
+      Script: {instanceID: 3590}
     - Class: 114
-      Script: {instanceID: 4596}
+      Script: {instanceID: 4830}
     - Class: 114
-      Script: {instanceID: 5048}
+      Script: {instanceID: 5316}
     - Class: 114
-      Script: {instanceID: 5218}
+      Script: {instanceID: 5492}
     - Class: 114
-      Script: {instanceID: 5372}
+      Script: {instanceID: 5668}
     - Class: 114
-      Script: {instanceID: 5452}
+      Script: {instanceID: 5742}
     - Class: 114
-      Script: {instanceID: 5550}
+      Script: {instanceID: 5756}
     - Class: 114
-      Script: {instanceID: 5562}
+      Script: {instanceID: 5860}
     - Class: 114
-      Script: {instanceID: 5772}
+      Script: {instanceID: 5878}
     - Class: 114
-      Script: {instanceID: 25492}
+      Script: {instanceID: 6096}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -200,16 +311,22 @@ ScriptsOnlyBuild:
   scriptHashData:
   - hash:
       serializedVersion: 2
-      Hash: 5ab533713adae59372fb3e10a585c186
-    assemblyName: Unity.Timeline.dll
-    namespaceName: UnityEngine.Timeline
-    className: AnimationPlayableAsset
+      Hash: 748dd2a2a28da4e618912da5ac45684b
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.EventSystems
+    className: StandaloneInputModule
   - hash:
       serializedVersion: 2
       Hash: a6e561615949734e9f12f9b61661f43e
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Image
+  - hash:
+      serializedVersion: 2
+      Hash: 5ab533713adae59372fb3e10a585c186
+    assemblyName: Unity.Timeline.dll
+    namespaceName: UnityEngine.Timeline
+    className: AnimationPlayableAsset
   - hash:
       serializedVersion: 2
       Hash: 77aaaaa51f7a8d8ff333a879741e47d2
@@ -228,6 +345,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.Animation.Runtime.dll
     namespaceName: UnityEngine.U2D.Animation
     className: SpriteSkin
+  - hash:
+      serializedVersion: 2
+      Hash: 0c919a1506817e79b3eb99022e5cba86
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: QuitApplicationOnClick
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -278,10 +401,28 @@ ScriptsOnlyBuild:
     className: Shadow
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: UnitySharpNEAT
+    className: GoalPiece
+  - hash:
+      serializedVersion: 2
       Hash: 300fd99066f8c288e85f5e81ce65fe34
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_FontAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 76687d188ad0b6e0916648909f08f435
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: UnitySharpNEAT
+    className: RoadPiece
+  - hash:
+      serializedVersion: 2
+      Hash: b844c119f1b2a392dec77988706e5587
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: InfoGatherer
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -290,13 +431,19 @@ ScriptsOnlyBuild:
     className: GroupTrack
   - hash:
       serializedVersion: 2
+      Hash: 0517d2439648dba38125ca5501517d0c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameInstanceNEATUnit
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.2D.Animation.Runtime.dll
     namespaceName: UnityEngine.U2D.Animation
     className: SpriteSkinUpdateHelper
   - hash:
       serializedVersion: 2
-      Hash: 585e04ee51ce23ed2e65397b33dfae46
+      Hash: ba48277f99f6ac450d6fd19ca835f97c
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameInstanceManager
@@ -312,6 +459,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Text
+  - hash:
+      serializedVersion: 2
+      Hash: 66dd19d4a34dc64a252a287bbfbfd9d1
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CamControls
   - hash:
       serializedVersion: 2
       Hash: 4de78781075c75589cdbaad292fb6cff
@@ -338,10 +491,34 @@ ScriptsOnlyBuild:
     className: DebrisAutoSpawner
   - hash:
       serializedVersion: 2
+      Hash: d9552e694718f8303901f4d9260ec077
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: UnitySharpNEAT
+    className: NeatSupervisor
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ExampleUnitController
+  - hash:
+      serializedVersion: 2
+      Hash: d896ab85b1594a7bffa986e293f6f4bd
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: UnitySharpNEAT
+    className: NeatUI
+  - hash:
+      serializedVersion: 2
       Hash: cfdd0010efd7b54c2b7512656dbc9119
     assemblyName: Unity.2D.IK.Runtime.dll
     namespaceName: UnityEngine.U2D.IK
     className: IKManager2D
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: NEATInputTaker
   - hash:
       serializedVersion: 2
       Hash: 4de98be78054c834aeb1edf8677421a7
@@ -452,12 +629,6 @@ ScriptsOnlyBuild:
     className: InputsIntoPlayerMovements
   - hash:
       serializedVersion: 2
-      Hash: 748dd2a2a28da4e618912da5ac45684b
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.EventSystems
-    className: StandaloneInputModule
-  - hash:
-      serializedVersion: 2
       Hash: f7858108331b563fb41b80b729297acd
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -474,6 +645,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: MarkerTrack
+  - hash:
+      serializedVersion: 2
+      Hash: ca5aa37f9aa62757071a1d1a1fd7cead
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: UnitySharpNEAT
+    className: Timescaler
   - hash:
       serializedVersion: 2
       Hash: 8e6ceabfd38a184413d69b7db56c89cc
@@ -512,6 +689,12 @@ ScriptsOnlyBuild:
     className: TextContainer
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: UnitySharpNEAT
+    className: Utility
+  - hash:
+      serializedVersion: 2
       Hash: 8aa3d6ccbcb54ee8db6c1229854adaaa
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -522,6 +705,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Outline
+  - hash:
+      serializedVersion: 2
+      Hash: 0b54025dd4bd485390e561a989d5f144
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: UnitySharpNEAT
+    className: CarController
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -752,6 +941,12 @@ ScriptsOnlyBuild:
     className: DieToPlayerBullets
   - hash:
       serializedVersion: 2
+      Hash: 0c919a1506817e79b3eb99022e5cba86
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GoToSceneOnClick
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
@@ -810,20 +1005,9 @@ ScriptsOnlyBuild:
     assemblyName: Unity.2D.IK.Runtime.dll
     namespaceName: UnityEngine.U2D.IK
     className: FabrikSolver2D
-  - hash:
-      serializedVersion: 2
-      Hash: 0c919a1506817e79b3eb99022e5cba86
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: GoToSceneOnClick
-  - hash:
-      serializedVersion: 2
-      Hash: 0c919a1506817e79b3eb99022e5cba86
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: QuitApplicationOnClick
   platform: 19
   scenePathNames:
   - Assets/Scenes/Main Menu.unity
   - Assets/Scenes/Solo Player.unity
+  - Assets/Scenes/Ai Training scene.unity
   playerPath: C:/Users/THINKPAD/Desktop/NEAT Invaders.exe
